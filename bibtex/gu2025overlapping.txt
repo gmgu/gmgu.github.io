@@ -1,0 +1,8 @@
+@inproceedings{gu2025overlapping,
+  title     = {Overlapping Context with Variable-Length Stride Increases Diversity when Training Large Language Model for Code},
+  author    = {Gu, Geonmo and Kwak, Jaeho and Moon, Haksoo and Shim, Hyun Seung and Kim, Yu Jin and Kim, Byoungjip and Lee, Moontae and Jeon, Hyejeong},
+  booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Industry Track)},
+  pages     = {456--468},
+  year      = {2025},
+  note      = {Gu and Kwak contributed equally}
+}

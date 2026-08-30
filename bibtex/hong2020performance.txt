@@ -1,0 +1,9 @@
+@article{hong2020performance,
+  title   = {Performance Comparison of Adaptive Matching Orders for the Subgraph Isomorphism Problem},
+  author  = {Hong, Seongi and Gu, Geonmo and Kim, Hyunjoon and Park, Kunsoo},
+  journal = {KIISE Transactions on Computing Practices},
+  volume  = {26},
+  number  = {1},
+  pages   = {38--43},
+  year    = {2020}
+}

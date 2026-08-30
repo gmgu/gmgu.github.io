@@ -1,0 +1,6 @@
+@inproceedings{hong2019performance,
+  title     = {Performance Comparison of Candidate-Size Ordering and Path-Size Ordering for Subgraph Isomorphism Problem},
+  author    = {Hong, Seongi and Gu, Geonmo and Kim, Hyunjoon and Park, Kunsoo},
+  booktitle = {Korea Computer Congress (KCC)},
+  year      = {2019}
+}

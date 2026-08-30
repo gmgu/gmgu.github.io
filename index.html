@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Geonmo Gu">
+    <meta property="og:title" content="Geonmo Gu">
+    <meta property="og:description" content="Principal Researcher at LG Electronics">
+    <meta property="og:image" content="https://gmgu.github.io/files/me.png">
+    <meta property="og:url" content="https://gmgu.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geonmo Gu">
+    <meta name="twitter:description" content="Principal Researcher at LG Electronics">
+    <meta name="twitter:image" content="https://gmgu.github.io/files/me.png">
+    <title>Geonmo Gu</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
+    <link rel="manifest" href="files/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var header = document.querySelector(".header");
+            var nav = document.getElementById("sticky-nav");
+            var observer = new IntersectionObserver(function(entries) {
+                nav.classList.toggle("visible", !entries[0].isIntersecting);
+            }, {threshold: 0});
+            observer.observe(header);
+            document.querySelectorAll(".stars[data-repo]").forEach(function(el) {
+                fetch("https://api.github.com/repos/" + el.dataset.repo)
+                    .then(function(r) { return r.json(); })
+                    .then(function(d) {
+                        if (d.stargazers_count) {
+                            var svg = el.querySelector(".gh-icon");
+                            el.textContent = " ★ " + d.stargazers_count.toLocaleString();
+                            if (svg) el.prepend(svg);
+                        }
+                    })
+                    .catch(function() {});
+            });
+        });
+    </script>
+</head>
+<body>
+<nav class="sticky-nav noselect" id="sticky-nav">
+    <div class="sticky-nav-content">
+        <a class="sticky-nav-name bold" href="javascript:void(0);" onclick="window.scrollTo({top:0,behavior:'smooth'})">Geonmo Gu</a>
+        <div class="sticky-nav-links">
+            <a href="https://scholar.google.com/citations?user=EpNo7F4AAAAJ&hl=en">Scholar</a>
+            <a href="https://github.com/gmgu">GitHub</a>
+            <a href="https://www.linkedin.com/in/geonmo-gu-b464a7223/">LinkedIn</a>
+            <a href="files/cv.pdf">CV</a>
+        </div>
+    </div>
+</nav>
+<div class="header noselect">
+    <div class="header-div content row">
+        <div class="header-profile-picture" style="background-color: #e8ecf0;"></div>
+        <div class="header-text">
+            <div class="header-name">
+                <h1>Geonmo Gu</h1>
+            </div>
+            <div class="header-subtitle">
+                Principal Researcher at LG Electronics
+            </div>
+            <div class="header-links">
+                <a class="social social-lg" href="https://scholar.google.com/citations?user=EpNo7F4AAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M343.8 106.7V79.4L363.5 64H149.6L20.5 176.3h85.7c-.2 2.1-.2 4-.2 6.2 0 20.8 7.2 38.1 21.7 51.9C142.2 248.2 160 255 181 255c4.9 0 9.8-.4 14.4-1-2.9 6.5-4.4 12.5-4.4 18.1 0 9.9 4.5 20.4 13.5 31.6-39.2 2.7-68.1 9.7-86.4 21.2-10.5 6.5-19 14.7-25.4 24.5-6.4 9.9-9.6 20.5-9.6 32 0 9.6 2.1 18.3 6.2 26.1 4.2 7.7 9.6 14.1 16.3 19 6.7 5 14.5 9.1 23.2 12.5 8.7 3.3 17.4 5.7 26.1 7.1 8.6 1.3 17.2 2 25.7 2 13.5 0 27-1.7 40.5-5.2 13.6-3.5 26.3-8.6 38.2-15.5 11.9-6.8 21.5-16.1 28.9-27.7 7.4-11.7 11.1-24.8 11.1-39.3 0-11-2.2-21-6.8-30.1-4.5-9.1-9.9-16.5-16.5-22.3-6.5-5.8-13-11.2-19.5-16-6.5-4.8-12-9.8-16.5-14.8s-6.7-10.1-6.7-15 1.7-9.7 5.2-14.3c3.5-4.6 7.7-9 12.6-13.3 4.9-4.2 9.9-9 14.8-14.1s9.1-11.8 12.6-20 5.2-17.4 5.2-27.8c0-13.5-2.5-24.5-7.5-33.3-.6-1-1.2-1.8-1.9-3l56.9-46.7v17.1c-7.4.9-6.6 5.3-6.6 10.6V246c0 6 4.9 10.8 10.8 10.8h4c6 0 10.8-4.9 10.8-10.8V117.3c.1-5.3.9-9.7-6.4-10.6zM236.4 329.1c1.1.8 3.7 2.8 7.7 6s6.8 5.7 8.3 7.4c1.4 1.7 3.6 4.2 6.4 7.5 2.8 3.4 4.7 6.3 5.7 8.7 1 2.5 2 5.5 3 8.9 1 3.4 1.5 7 1.5 10.6 0 17-6.6 29.7-19.7 37.9s-28.8 12.3-46.9 12.3c-9.2 0-18.2-1.1-27.1-3.2-8.8-2.1-17.3-5.3-25.4-9.6-8.1-4.3-14.6-10.2-19.5-17.8-4.9-7.6-7.4-16.4-7.4-26.2 0-10.3 2.8-19.3 8.4-26.9 5.6-7.6 12.9-13.4 22-17.3 9.1-3.9 18.2-6.7 27.6-8.4 9.3-1.7 18.8-2.6 28.4-2.6 4.5 0 7.9.3 10.4.7.5.2 3 2.1 7.7 5.6 4.9 3.5 7.8 5.7 8.9 6.4zM233 228.6c-7.4 8.9-17.7 13.3-31 13.3-11.9 0-22.3-4.8-31.3-14.3s-15.4-20.3-19.3-32.4c-3.9-12.1-5.9-24-5.9-35.6 0-13.7 3.6-25.4 10.8-35 7.2-9.6 17.5-14.5 30.9-14.5 11.9 0 22.4 5 31.4 15.2 9.1 10.1 15.6 21.4 19.5 34 3.9 12.5 5.9 24.5 5.9 36 .1 13.3-3.6 24.4-11 33.3z"/></svg></a>
+                <a class="social" href="https://github.com/gmgu" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                <a class="social" href="https://www.linkedin.com/in/geonmo-gu-b464a7223/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+                <a class="social" href="files/cv.pdf" aria-label="CV" title="CV"><svg viewBox="0 0 384 512" fill="currentColor"><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" style="padding-bottom: 64px;">
+    <div>
+        <p>
+            I am a Principal Researcher at <span class="bold">LG Electronics</span>, working on <span class="bold">Humanoid AI</span>. Previously, I worked on the development of an <span class="bold">AI coding assistant</span> built on large language models, used internally across the company.
+        </p>
+        <p>
+            I received my Ph.D. in Computer Science and Engineering from Seoul National University, advised by <a href="https://snucta.org/kpark/">Prof. Kunsoo Park</a>, with a thesis on fast graph isomorphism algorithms. Before joining LG Electronics, I was a postdoctoral research assistant at SNU's Institute of Computer Technology and interned at NAVER.
+        </p>
+    </div>
+    <div>
+        <h2 class="noselect">Publications</h2>
+        <p>Papers sorted by recency. Representative papers are <span style="background-color: #e4d6f4">highlighted</span>.</p>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Overlapping Context with Variable-Length Stride Increases Diversity when Training Large Language Model for Code</span><br/>
+                <span class="bold">Geonmo Gu*</span>, Jaeho Kwak*, Haksoo Moon, Hyun Seung Shim, Yu Jin Kim, Byoungjip Kim, Moontae Lee, Hyejeong Jeon<br/>
+                <span class="italic">Annual Meeting of the Association for Computational Linguistics (Industry)</span>, 2025<br/>
+                <a class="btn" href="https://aclanthology.org/2025.acl-industry.32/" target="_blank" rel="noopener">paper</a> / <a class="btn" href="bibtex/gu2025overlapping.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Efficient Graph Isomorphism Query Processing using Degree Sequences and Color-Label Distributions</span><br/>
+                <span class="bold">Geonmo Gu</span>, Yehyun Nam, Kunsoo Park, Zvi Galil, Giuseppe F. Italiano, Wook-Shin Han<br/>
+                <span class="italic">IEEE International Conference on Data Engineering</span>, 2022<br/>
+                <a class="btn" href="https://ieeexplore.ieee.org/document/9835665/" target="_blank" rel="noopener">paper</a> / <a class="btn" href="https://github.com/SNUCSE-CTA/DCQ" target="_blank" rel="noopener">code</a> / <a class="btn" href="bibtex/gu2022efficient.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Scalable Graph Isomorphism: Combining Pairwise Color Refinement and Backtracking via Compressed Candidate Space</span><br/>
+                <span class="bold">Geonmo Gu</span>, Yehyun Nam, Kunsoo Park, Zvi Galil, Giuseppe F. Italiano, Wook-Shin Han<br/>
+                <span class="italic">IEEE International Conference on Data Engineering</span>, 2021<br/>
+                <a class="btn" href="https://ieeexplore.ieee.org/document/9458740/" target="_blank" rel="noopener">paper</a> / <a class="btn" href="https://github.com/SNUCSE-CTA/GI" target="_blank" rel="noopener">code</a> / <a class="btn" href="bibtex/gu2021scalable.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Fast Algorithms for Single and Multiple Pattern Cartesian Tree Matching</span><br/>
+                Siwoo Song, <span class="bold">Geonmo Gu</span>, Cheol Ryu, Simone Faro, Thierry Lecroq, Kunsoo Park<br/>
+                <span class="italic">Theoretical Computer Science</span>, 2020<br/>
+                <a class="btn" href="https://doi.org/10.1016/j.tcs.2020.10.009" target="_blank" rel="noopener">paper</a> / <a class="btn" href="bibtex/song2020fast.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Fast Multiple Pattern Cartesian Tree Matching</span><br/>
+                <span class="bold">Geonmo Gu</span>, Siwoo Song, Simone Faro, Thierry Lecroq, Kunsoo Park<br/>
+                <span class="italic">International Conference and Workshop on Algorithms and Computation</span>, 2020<br/>
+                <a class="btn" href="https://arxiv.org/abs/1911.01644" target="_blank" rel="noopener">arXiv</a> / <a class="btn" href="bibtex/gu2020fast.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Performance Comparison of Adaptive Matching Orders for the Subgraph Isomorphism Problem</span><br/>
+                Seongi Hong, <span class="bold">Geonmo Gu</span>, Hyunjoon Kim, Kunsoo Park<br/>
+                <span class="italic">KIISE Transactions on Computing Practices</span>, 26.1:38-43, 2020<br/>
+                <a class="btn" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002551436" target="_blank" rel="noopener">paper</a> / <a class="btn" href="bibtex/hong2020performance.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Performance Comparison of Candidate-Size Ordering and Path-Size Ordering for Subgraph Isomorphism Problem</span><br/>
+                Seongi Hong, <span class="bold">Geonmo Gu</span>, Hyunjoon Kim, Kunsoo Park<br/>
+                <span class="italic">Korea Computer Congress</span>, 2019<br/>
+                <a class="btn" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08763584" target="_blank" rel="noopener">paper</a> / <a class="btn" href="bibtex/hong2019performance.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together</span><br/>
+                Myoungji Han, Hyunjoon Kim, <span class="bold">Geonmo Gu</span>, Kunsoo Park, Wook-Shin Han<br/>
+                <span class="italic">ACM SIGMOD International Conference on Management of Data</span>, 2019<br/>
+                <a class="btn" href="https://doi.org/10.1145/3299869.3319880" target="_blank" rel="noopener">paper</a> / <a class="btn" href="https://github.com/SNUCSE-CTA/DAF" target="_blank" rel="noopener">code</a> / <a class="btn" href="bibtex/han2019efficient.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Fast Multiple Order-Preserving Matching Algorithms</span><br/>
+                Myoungji Han, Munseong Kang, Sukhyeun Cho, <span class="bold">Geonmo Gu</span>, Jeong Seop Sim, Kunsoo Park<br/>
+                <span class="italic">International Workshop on Combinatorial Algorithms</span>, 2015<br/>
+                <a class="btn" href="https://arxiv.org/abs/1506.05203" target="_blank" rel="noopener">arXiv</a> / <a class="btn" href="bibtex/han2015fast.txt" target="_blank" rel="noopener">bibtex</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2 class="noselect">Projects</h2>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Development of AI Coding Assistant using Large Language Model</span><br/>
+                LG Electronics<br/>
+                <span class="italic">Jun. 2022 &ndash; Dec. 2024</span><br/>
+                Code-suggestion assistant for webOS and general programming, shipped as a VS Code extension and VIM plugin, backed by billion-scale LLMs served on DGX GPUs via vLLM.
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Development of Coding Education Program Utilizing AI</span><br/>
+                LG Electronics<br/>
+                <span class="italic">Apr. 2022 &ndash; Dec. 2022</span><br/>
+                A tool that generates Python code from natural-language instructions for middle/high-school students learning to code, built on an encoder-decoder transformer served on RTX GPUs.
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Framework of Practical Algorithms for NP-hard Graph Problems</span><br/>
+                Seoul National University &middot; Funded by the Korea government (Ministry of Science and ICT)<br/>
+                <span class="italic">Apr. 2018 &ndash; Aug. 2021</span><br/>
+                Algorithm development for fast subgraph isomorphism, graph isomorphism, and graph isomorphism query processing, with open-source releases.<br/>
+                <a class="btn" href="https://github.com/SNUCSE-CTA" target="_blank" rel="noopener">code</a>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Analyzing Conversion Tracking Data</span><br/>
+                NAVER, AI Dev2<br/>
+                <span class="italic">Oct. 2021</span><br/>
+                Exploratory data analysis on hundreds of gigabytes of advertisement conversion tracking data, and an optimization model that maximizes conversion rate using linear programming.
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Algorithm Development for Scanner/Stage Path Generation</span><br/>
+                Seoul National University &middot; Supported by JASTECH<br/>
+                <span class="italic">Jul. 2014 &ndash; Jun. 2017</span><br/>
+                An algorithm to synchronize scanner and stage motion, including a path-simplification method based on chain stabbing and an efficient path generation method via the traveling salesman problem.
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2 class="noselect">Seminars</h2>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Beyond Behavior Cloning VLA Techniques</span><br/>
+                LG Electronics<br/>
+                <span class="italic">Nov. 2025</span>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Distributed Training Large Language Models</span><br/>
+                Dankook University<br/>
+                <span class="italic">Apr. 2024</span><br/>
+                <a class="btn" href="files/202404_distributed_training_large_language_models.pdf" target="_blank" rel="noopener">slides</a> / <a class="btn" href="https://github.com/gmgu/LLMOps" target="_blank" rel="noopener">code</a>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Distributed Training Techniques for Large AI Models</span><br/>
+                LG Electronics<br/>
+                <span class="italic">Jul. 2023</span>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Invited talk, STARLAB Meeting</span><br/>
+                Korea Computer Congress<br/>
+                <span class="italic">Jun. 2023</span><br/>
+                <a class="btn" href="files/20230620_starlab.pdf" target="_blank" rel="noopener">slides</a>
+            </div>
+        </div>
+        <div class="project row">
+            <div class="row-media" style="background-color: #eee;"></div>
+            <div class="row-text">
+                <span class="publication-title bold">Invited talk, 2023 TOPCIT Workshop</span><br/>
+                IITP<br/>
+                <span class="italic">Mar. 2023</span><br/>
+                <a class="btn" href="files/20230308_TOPCIT.pdf" target="_blank" rel="noopener">slides</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer noselect">
+    <div class="footer-content">
+        &copy; 2026 Geonmo Gu. Design adapted from <a href="https://www.nicklashansen.com/" target="_blank" rel="noopener">nicklashansen.com</a> (used with permission per its README).
+    </div>
+</div>
+</body>
+</html>

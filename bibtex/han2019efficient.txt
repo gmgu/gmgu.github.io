@@ -1,0 +1,8 @@
+@inproceedings{han2019efficient,
+  title     = {Efficient Subgraph Matching: Harmonizing Dynamic Programming, Adaptive Matching Order, and Failing Set Together},
+  author    = {Han, Myoungji and Kim, Hyunjoon and Gu, Geonmo and Park, Kunsoo and Han, Wook-Shin},
+  booktitle = {ACM SIGMOD International Conference on Management of Data},
+  pages     = {1429--1446},
+  year      = {2019},
+  doi       = {10.1145/3299869.3319880}
+}

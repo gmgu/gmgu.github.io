@@ -1,0 +1,7 @@
+@inproceedings{gu2022efficient,
+  title     = {Efficient Graph Isomorphism Query Processing using Degree Sequences and Color-Label Distributions},
+  author    = {Gu, Geonmo and Nam, Yehyun and Park, Kunsoo and Galil, Zvi and Italiano, Giuseppe F. and Han, Wook-Shin},
+  booktitle = {IEEE International Conference on Data Engineering (ICDE)},
+  pages     = {872--884},
+  year      = {2022}
+}

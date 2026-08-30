@@ -1,0 +1,8 @@
+@inproceedings{gu2020fast,
+  title     = {Fast Multiple Pattern Cartesian Tree Matching},
+  author    = {Gu, Geonmo and Song, Siwoo and Faro, Simone and Lecroq, Thierry and Park, Kunsoo},
+  booktitle = {International Conference and Workshop on Algorithms and Computation (WALCOM)},
+  year      = {2020},
+  eprint    = {1911.01644},
+  archivePrefix = {arXiv}
+}

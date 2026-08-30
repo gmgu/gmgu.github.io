@@ -1,0 +1,6 @@
+@inproceedings{gu2021scalable,
+  title     = {Scalable Graph Isomorphism: Combining Pairwise Color Refinement and Backtracking via Compressed Candidate Space},
+  author    = {Gu, Geonmo and Nam, Yehyun and Park, Kunsoo and Galil, Zvi and Italiano, Giuseppe F. and Han, Wook-Shin},
+  booktitle = {IEEE International Conference on Data Engineering (ICDE)},
+  year      = {2021}
+}
