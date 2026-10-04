@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" width="400" height="210" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <rect width="400" height="210" fill="#ffffff"/>
+  <text x="200" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#345">Scanner / Stage Path Generation</text>
+
+  <rect x="10" y="68" width="110" height="60" rx="7" fill="#f4f6f8" stroke="#c9d4de" stroke-width="1.5"/>
+  <text x="65" y="93" text-anchor="middle" font-size="16" fill="#2c3c4c">Path</text>
+  <text x="65" y="112" text-anchor="middle" font-size="16" fill="#2c3c4c">simplification</text>
+
+  <path d="M124 98 H134" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M133 93 L143 98 L133 103 z" fill="#8fa3b5"/>
+
+  <rect x="150" y="68" width="100" height="60" rx="7" fill="#f4f6f8" stroke="#c9d4de" stroke-width="1.5"/>
+  <text x="200" y="93" text-anchor="middle" font-size="16" fill="#2c3c4c">Ordering</text>
+  <text x="200" y="112" text-anchor="middle" font-size="13" fill="#6b7c8c">via TSP</text>
+
+  <path d="M254 98 H264" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M263 93 L273 98 L263 103 z" fill="#8fa3b5"/>
+
+  <rect x="280" y="68" width="110" height="60" rx="7" fill="#e4d6f4" stroke="#75409C" stroke-width="1.5"/>
+  <text x="335" y="93" text-anchor="middle" font-size="16" font-weight="700" fill="#5b2f7d">Scanner +</text>
+  <text x="335" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#5b2f7d">Stage sync</text>
+
+  <text x="65" y="150" text-anchor="middle" font-size="13" fill="#6b7c8c">chain stabbing</text>
+  <text x="200" y="182" text-anchor="middle" font-size="13" fill="#6b7c8c">computational geometry for laser machining</text>
+</svg>

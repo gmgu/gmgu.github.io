@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" width="400" height="210" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <rect width="400" height="210" fill="#ffffff"/>
+  <text x="200" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="#345">AI Coding Assistant</text>
+
+  <rect x="12" y="52" width="104" height="44" rx="7" fill="#f4f6f8" stroke="#c9d4de" stroke-width="1.5"/>
+  <text x="64" y="80" text-anchor="middle" font-size="17" fill="#2c3c4c">VS Code</text>
+
+  <rect x="12" y="114" width="104" height="44" rx="7" fill="#f4f6f8" stroke="#c9d4de" stroke-width="1.5"/>
+  <text x="64" y="142" text-anchor="middle" font-size="17" fill="#2c3c4c">VIM</text>
+
+  <path d="M120 74 H140 V105" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M120 136 H140 V105" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M140 105 H154" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M153 100 L163 105 L153 110 z" fill="#8fa3b5"/>
+
+  <rect x="170" y="78" width="104" height="54" rx="7" fill="#f4f6f8" stroke="#c9d4de" stroke-width="1.5"/>
+  <text x="222" y="101" text-anchor="middle" font-size="17" fill="#2c3c4c">vLLM</text>
+  <text x="222" y="120" text-anchor="middle" font-size="13" fill="#6b7c8c">DGX GPUs</text>
+
+  <path d="M278 105 H292" fill="none" stroke="#8fa3b5" stroke-width="2"/>
+  <path d="M291 100 L301 105 L291 110 z" fill="#8fa3b5"/>
+
+  <rect x="308" y="78" width="80" height="54" rx="7" fill="#e4d6f4" stroke="#75409C" stroke-width="1.5"/>
+  <text x="348" y="101" text-anchor="middle" font-size="17" font-weight="700" fill="#5b2f7d">Code</text>
+  <text x="348" y="120" text-anchor="middle" font-size="17" font-weight="700" fill="#5b2f7d">LLM</text>
+
+  <text x="200" y="186" text-anchor="middle" font-size="13" fill="#6b7c8c">code suggestions for webOS and general programming</text>
+</svg>
